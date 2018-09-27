@@ -33,7 +33,7 @@ public class Prod {
     //endregion
 
 
-    //Конструктор для проверки заполнения листов. В финале применяться не будет
+    //Конструктор для проверки заполнения листов. В финале применяться не будет. Будет использоваться конструктор без параметров
     public Prod(String prod_name, double prod_price, int prod_count) {
         this.prod_name = prod_name;
         this.prod_price = prod_price;
@@ -42,4 +42,6 @@ public class Prod {
 
     public Prod() {
     }
+
+    //TODO add boolean IsJuice
 }

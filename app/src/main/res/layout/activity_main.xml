@@ -10,7 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/prodListView">
+    </ListView>
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/customerOrderListView">
     </ListView>
 
 </android.support.constraint.ConstraintLayout>
