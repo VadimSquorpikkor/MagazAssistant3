@@ -6,6 +6,11 @@
     android:orientation="horizontal">
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="customer_order_list_item"/>
+
+    <TextView
         android:id="@+id/prod_name_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

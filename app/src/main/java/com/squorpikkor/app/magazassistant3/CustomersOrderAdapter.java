@@ -17,13 +17,13 @@ public class  CustomersOrderAdapter extends ArrayAdapter<Customer> {
 
     private LayoutInflater inflater;
     private int layout;
-    private List<Customer> sourceList;
+    private List<Customer> customers;
     private OrderListAdapter orderListAdapter;
     private Context adapterContext;
 
     CustomersOrderAdapter(Context context, int resource, List<Customer> sourceList) {
         super(context, resource, sourceList);
-        this.sourceList = sourceList;
+        this.customers = sourceList;
         this.layout = resource;
         this.inflater = LayoutInflater.from(context);
         adapterContext = context;
@@ -41,15 +41,13 @@ public class  CustomersOrderAdapter extends ArrayAdapter<Customer> {
         TextView activityView = view.findViewById(R.id.total_price);
         ListView elementView = view.findViewById(R.id.customers_order_list_view);
 
-        Customer state = sourceList.get(position);
+        Customer state = customers.get(position);
 
         nameView.setText(state.getCustomerName());
-//        activityView.setText(String.format("%.5f" , state.getActivity()) + " кБк");
         activityView.setText(String.valueOf(state.totalPrice()));
 
         orderListAdapter = new OrderListAdapter(adapterContext, R.layout.customer_order_list_item, state.getProdsList());
         elementView.setAdapter(orderListAdapter); //
-        // ;setText(state.getElement());
 
         return view;
     }

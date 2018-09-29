@@ -32,18 +32,22 @@ public class OrderListAdapter extends ArrayAdapter<Prod> {
         View view = inflater.inflate(this.layout, parent, false);
 
         TextView nameView = view.findViewById(R.id.prod_name_view);
-        TextView activityView = view.findViewById(R.id.prod_price);
-        TextView elementView = view.findViewById(R.id.prod_count);
+        TextView activityView = view.findViewById(R.id.prod_price_view);
+        TextView elementView = view.findViewById(R.id.prod_count_view);
 
         Prod state = sourceList.get(position);
 
-        nameView.setText(state.getProd_name());
-        nameView.setText(String.valueOf(state.getProd_price()));
-        nameView.setText(String.valueOf(state.getProd_count()));
-//        activityView.setText(String.format("%.5f", state.getActivity()) + " кБк");
-        //activityView.setText(String.valueOf(state.getActivity()));
-//        elementView.setText(state.getElement());
+        //TODO убрать затычку
+        nameView.setText("NAME");
+        activityView.setText("PRICE");
+        elementView.setText("COUNT");
+/*
 
+        nameView.setText(state.getProd_name());
+        activityView.setText(String.valueOf(state.getProd_price()));
+        elementView.setText(String.valueOf(state.getProd_count()));
+
+*/
         return view;
     }
 

@@ -30,8 +30,9 @@ public class MainActivity extends AppCompatActivity {
         prods.add(new Prod("Name", 5, 1));
         customers.add(new Customer("CustomerName", prods));
 
-        listView = findViewById(R.id.customers_order_list_view);
+        listView = findViewById(R.id.customerOrderListView);
         customersOrderAdapter = new CustomersOrderAdapter(this, R.layout.customers_order_view_list, customers);
+        listView.getDividerHeight();
         listView.setAdapter(customersOrderAdapter);
 /*
         prodList = new ArrayList<>();

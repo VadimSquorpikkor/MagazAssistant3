@@ -29,7 +29,7 @@ public class Customer {
     }
     //endregion
 
-    //TODO totalPrice
+    //TODO убрать затычку
     public double totalPrice() {
         //сумма цен продлиста
         return 777;//затычка
